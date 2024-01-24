@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ground_control", "ground_co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "communication", "communication\communication.csproj", "{DE7A8400-9E7A-482B-B1FE-DEBF2194A791}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{DF06FDC3-A14A-4D77-9AF2-CA408D41E50C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DE7A8400-9E7A-482B-B1FE-DEBF2194A791}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE7A8400-9E7A-482B-B1FE-DEBF2194A791}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE7A8400-9E7A-482B-B1FE-DEBF2194A791}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF06FDC3-A14A-4D77-9AF2-CA408D41E50C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF06FDC3-A14A-4D77-9AF2-CA408D41E50C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF06FDC3-A14A-4D77-9AF2-CA408D41E50C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF06FDC3-A14A-4D77-9AF2-CA408D41E50C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
