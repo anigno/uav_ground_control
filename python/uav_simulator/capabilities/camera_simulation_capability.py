@@ -1,9 +1,9 @@
 from PIL import Image
 import io
 
-from uav_simulator.capabilities.capability_base import CapabilityBase
-from uav_simulator.capabilities.capability_data import CapabilityData
-from uav_simulator.data_types.uav_status import UavStatus
+from python.uav_simulator.capabilities.capability_base import CapabilityBase
+from python.uav_simulator.capabilities.capability_data import CapabilityData
+from python.uav_simulator.data_types.uav_status import UavStatus
 
 class CameraSimulationCapability(CapabilityBase):
     def __init__(self):

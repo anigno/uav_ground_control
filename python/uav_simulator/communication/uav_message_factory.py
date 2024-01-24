@@ -1,7 +1,7 @@
-from uav_simulator.communication.messages.capabilities_update_message import CapabilitiesUpdateMessage
-from uav_simulator.communication.messages.fly_to_destination_message import FlyToDestinationMessage
-from uav_simulator.communication.messages.status_update_message import StatusUpdateMessage
-from uav_simulator.communication.messages_factory_base import MessagesFactoryBase
+from python.uav_simulator.communication.messages.capabilities_update_message import CapabilitiesUpdateMessage
+from python.uav_simulator.communication.messages.fly_to_destination_message import FlyToDestinationMessage
+from python.uav_simulator.communication.messages.status_update_message import StatusUpdateMessage
+from python.uav_simulator.communication.messages_factory_base import MessagesFactoryBase
 
 class UavSimulatorMessageFactory(MessagesFactoryBase):
     """specific UAV simulator messages factory"""

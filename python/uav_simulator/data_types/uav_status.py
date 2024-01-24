@@ -1,8 +1,8 @@
 from typing import Optional
 
-from uav_simulator.data_types.direction3d import Direction3d
-from uav_simulator.data_types.flight_mode_enum import FlightModeEnum
-from uav_simulator.data_types.location3d import Location3d
+from python.uav_simulator.data_types.direction3d import Direction3d
+from python.uav_simulator.data_types.flight_mode_enum import FlightModeEnum
+from python.uav_simulator.data_types.location3d import Location3d
 
 class UavStatus:
     """UAV current state parameters"""

@@ -3,16 +3,16 @@ import time
 from threading import Thread, RLock
 from typing import Optional, List
 
-from common.utils.printable_params import PrintableParams
-from uav_simulator.capabilities.capability_base import CapabilityBase
-from uav_simulator.communication.messages.fly_to_destination_message import FlyToDestinationMessage
-from uav_simulator.communication.uav_communicator import UavCommunicator
-from uav_simulator.data_types.direction3d import Direction3d
-from uav_simulator.data_types.flight_mode_enum import FlightModeEnum
-from uav_simulator.data_types.location3d import Location3d
-from uav_simulator.data_types.uav_params import UavParams
-from uav_simulator.data_types.uav_status import UavStatus
-from uav_simulator.logic.simple_uav_actions import SimpleUavActions
+from python.common.utils.printable_params import PrintableParams
+from python.uav_simulator.capabilities.capability_base import CapabilityBase
+from python.uav_simulator.communication.messages.fly_to_destination_message import FlyToDestinationMessage
+from python.uav_simulator.communication.uav_communicator import UavCommunicator
+from python.uav_simulator.data_types.direction3d import Direction3d
+from python.uav_simulator.data_types.flight_mode_enum import FlightModeEnum
+from python.uav_simulator.data_types.location3d import Location3d
+from python.uav_simulator.data_types.uav_params import UavParams
+from python.uav_simulator.data_types.uav_status import UavStatus
+from python.uav_simulator.logic.simple_uav_actions import SimpleUavActions
 
 class SimpleUavManager:
     """manage the Uav operations and messaging

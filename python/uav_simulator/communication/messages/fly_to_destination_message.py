@@ -1,9 +1,9 @@
 import msgpack
 
-from uav_simulator.communication.messages.message_base import MessageBase
-from uav_simulator.communication.messages.message_type_enum import MessageTypeEnum
-from uav_simulator.data_types.flight_mode_enum import FlightModeEnum
-from uav_simulator.data_types.location3d import Location3d
+from python.uav_simulator.communication.messages.message_base import MessageBase
+from python.uav_simulator.communication.messages.message_type_enum import MessageTypeEnum
+from python.uav_simulator.data_types.flight_mode_enum import FlightModeEnum
+from python.uav_simulator.data_types.location3d import Location3d
 
 class FlyToDestinationMessage(MessageBase):
     MESSAGE_TYPE = MessageTypeEnum.FLY_TO_DESTINATION

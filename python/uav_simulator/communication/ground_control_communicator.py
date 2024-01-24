@@ -1,16 +1,16 @@
 from logging import Logger
 from typing import Dict, Tuple
 
-from common.utils.generic_event import GenericEvent
-from uav_simulator.communication.messages.capabilities_update_message import CapabilitiesUpdateMessage
-from uav_simulator.communication.messages.fly_to_destination_message import FlyToDestinationMessage
-from uav_simulator.communication.messages.message_base import MessageBase
-from uav_simulator.communication.messages.message_type_enum import MessageTypeEnum
-from uav_simulator.communication.messages.status_update_message import StatusUpdateMessage
-from uav_simulator.communication.messages_factory_base import MessagesFactoryBase
-from uav_simulator.communication.specialized_communicator_base import SpecializedCommunicatorBase
-from uav_simulator.data_types.flight_mode_enum import FlightModeEnum
-from uav_simulator.data_types.location3d import Location3d
+from python.common.utils.generic_event import GenericEvent
+from python.uav_simulator.communication.messages.capabilities_update_message import CapabilitiesUpdateMessage
+from python.uav_simulator.communication.messages.fly_to_destination_message import FlyToDestinationMessage
+from python.uav_simulator.communication.messages.message_base import MessageBase
+from python.uav_simulator.communication.messages.message_type_enum import MessageTypeEnum
+from python.uav_simulator.communication.messages.status_update_message import StatusUpdateMessage
+from python.uav_simulator.communication.messages_factory_base import MessagesFactoryBase
+from python.uav_simulator.communication.specialized_communicator_base import SpecializedCommunicatorBase
+from python.uav_simulator.data_types.flight_mode_enum import FlightModeEnum
+from python.uav_simulator.data_types.location3d import Location3d
 
 class GroundControlCommunicator(SpecializedCommunicatorBase):
     """handle receiving UAVs messages and send flight missions to UAVs, manage uav addressbook"""

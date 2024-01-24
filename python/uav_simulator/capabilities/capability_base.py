@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
-from uav_simulator.capabilities.capability_data import CapabilityData
-from uav_simulator.data_types.uav_status import UavStatus
+from python.uav_simulator.capabilities.capability_data import CapabilityData
+from python.uav_simulator.data_types.uav_status import UavStatus
 
 class CapabilityBase(ABC):
     """base class for all capabilities"""

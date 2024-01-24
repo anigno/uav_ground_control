@@ -1,7 +1,7 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-from common.meta_classes.no_instance_meta import NoInstanceMeta
-from common.utils.generic_event import GenericEvent
+from python.common.meta_classes.no_instance_meta import NoInstanceMeta
+from python.common.utils.generic_event import GenericEvent
 
 class Http2Server(metaclass=NoInstanceMeta):
     """receive data bytes over http2 POST request and raise an event"""

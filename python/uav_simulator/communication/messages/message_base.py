@@ -3,8 +3,8 @@ from abc import ABC
 from threading import RLock
 import msgpack
 
-from common.utils.printable_params import PrintableParams
-from uav_simulator.communication.messages.message_type_enum import MessageTypeEnum
+from python.common.utils.printable_params import PrintableParams
+from python.uav_simulator.communication.messages.message_type_enum import MessageTypeEnum
 
 class MessageBase(ABC):
     """base class for messages, uses msgpack serialization"""

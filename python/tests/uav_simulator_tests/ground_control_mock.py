@@ -1,14 +1,14 @@
 import logging
 import time
 
-from common.logging_provider.logging_initiator_by_code import LoggingInitiatorByCode
-from uav_simulator.communication.ground_control_communicator import GroundControlCommunicator
-from uav_simulator.communication.messages.capabilities_update_message import CapabilitiesUpdateMessage
-from uav_simulator.communication.messages.status_update_message import StatusUpdateMessage
-from uav_simulator.communication.messages_factory_base import MessagesFactoryBase
-from uav_simulator.communication.uav_message_factory import UavSimulatorMessageFactory
-from uav_simulator.data_types.flight_mode_enum import FlightModeEnum
-from uav_simulator.data_types.location3d import Location3d
+from python.common.logging_provider.logging_initiator_by_code import LoggingInitiatorByCode
+from python.uav_simulator.communication.ground_control_communicator import GroundControlCommunicator
+from python.uav_simulator.communication.messages.capabilities_update_message import CapabilitiesUpdateMessage
+from python.uav_simulator.communication.messages.status_update_message import StatusUpdateMessage
+from python.uav_simulator.communication.messages_factory_base import MessagesFactoryBase
+from python.uav_simulator.communication.uav_message_factory import UavSimulatorMessageFactory
+from python.uav_simulator.data_types.flight_mode_enum import FlightModeEnum
+from python.uav_simulator.data_types.location3d import Location3d
 
 class GroundControlMock:
     """simulate a ground control"""

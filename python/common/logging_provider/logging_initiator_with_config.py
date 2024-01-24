@@ -3,7 +3,7 @@ import json
 import random
 import time
 
-from common.logging_provider.logging_initiator_base import LoggingInitiatorBase
+from python.common.logging_provider.logging_initiator_base import LoggingInitiatorBase
 
 class LoggingInitiatorWithConfig(LoggingInitiatorBase):
 

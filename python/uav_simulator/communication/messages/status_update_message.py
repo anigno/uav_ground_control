@@ -1,11 +1,11 @@
 import msgpack
 
-from uav_simulator.communication.messages.message_base import MessageBase
-from uav_simulator.communication.messages.message_type_enum import MessageTypeEnum
-from uav_simulator.data_types.direction3d import Direction3d
-from uav_simulator.data_types.flight_mode_enum import FlightModeEnum
-from uav_simulator.data_types.location3d import Location3d
-from uav_simulator.data_types.uav_status import UavStatus
+from python.uav_simulator.communication.messages.message_base import MessageBase
+from python.uav_simulator.communication.messages.message_type_enum import MessageTypeEnum
+from python.uav_simulator.data_types.direction3d import Direction3d
+from python.uav_simulator.data_types.flight_mode_enum import FlightModeEnum
+from python.uav_simulator.data_types.location3d import Location3d
+from python.uav_simulator.data_types.uav_status import UavStatus
 
 class StatusUpdateMessage(MessageBase):
     MESSAGE_TYPE = MessageTypeEnum.STATUS_UPDATE

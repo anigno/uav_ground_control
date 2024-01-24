@@ -1,9 +1,9 @@
 import math
 import unittest
 
-from uav_simulator.data_types.direction3d import Direction3d
-from uav_simulator.data_types.location3d import Location3d
-from uav_simulator.logic.simple_uav_actions import SimpleUavActions
+from python.uav_simulator.data_types.direction3d import Direction3d
+from python.uav_simulator.data_types.location3d import Location3d
+from python.uav_simulator.logic.simple_uav_actions import SimpleUavActions
 
 class TestUavActions(unittest.TestCase):
 

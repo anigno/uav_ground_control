@@ -2,13 +2,13 @@ import argparse
 import logging
 from typing import List
 
-from common.logging_provider.logging_initiator_by_code import LoggingInitiatorByCode
+from python.common.logging_provider.logging_initiator_by_code import LoggingInitiatorByCode
 from data_types.uav_params import UavParams
-from uav_simulator.capabilities.capability_base import CapabilityBase
-from uav_simulator.communication.uav_communicator import UavCommunicator
-from uav_simulator.communication.uav_message_factory import UavSimulatorMessageFactory
-from uav_simulator.data_types.location3d import Location3d
-from uav_simulator.logic.simple_uav_manager import SimpleUavManager
+from python.uav_simulator.capabilities.capability_base import CapabilityBase
+from python.uav_simulator.communication.uav_communicator import UavCommunicator
+from python.uav_simulator.communication.uav_message_factory import UavSimulatorMessageFactory
+from python.uav_simulator.data_types.location3d import Location3d
+from python.uav_simulator.logic.simple_uav_manager import SimpleUavManager
 
 class Runner:
     def __init__(self, logger: logging.Logger, config_file: str, location_string: str,

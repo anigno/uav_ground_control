@@ -5,14 +5,14 @@ from enum import Enum
 from http.client import HTTPResponse
 from logging import Logger
 
-from common.logging_provider.logging_initiator_by_code import LoggingInitiatorByCode
-from common.utils.generic_event import GenericEvent
-from common.utils.printable_params import PrintableParams
-from uav_simulator.communication.http2.http2_client import Http2Client
-from uav_simulator.communication.http2.http2_server import Http2Server
-from uav_simulator.communication.messages.message_base import MessageBase
-from uav_simulator.communication.messages.message_sent_fail_args import MessageSentFailsArgs
-from uav_simulator.communication.messages_factory_base import MessagesFactoryBase
+from python.common.logging_provider.logging_initiator_by_code import LoggingInitiatorByCode
+from python.common.utils.generic_event import GenericEvent
+from python.common.utils.printable_params import PrintableParams
+from python.uav_simulator.communication.http2.http2_client import Http2Client
+from python.uav_simulator.communication.http2.http2_server import Http2Server
+from python.uav_simulator.communication.messages.message_base import MessageBase
+from python.uav_simulator.communication.messages.message_sent_fail_args import MessageSentFailsArgs
+from python.uav_simulator.communication.messages_factory_base import MessagesFactoryBase
 
 class Http2Communicator:
     """sends and receives messages based on MessageBase, using http2 client and server"""

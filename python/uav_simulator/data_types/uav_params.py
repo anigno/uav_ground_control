@@ -1,6 +1,7 @@
 import json
+import os.path
 
-from common.utils.printable_params import PrintableParams
+from python.common.utils.printable_params import PrintableParams
 
 class UavParams:
     """UAV configuration values
@@ -12,9 +13,14 @@ class UavParams:
 
     @staticmethod
     def from_json_config_file(json_config: str):
-        with open(file=json_config, mode='r') as file:
-            data_dict = json.load(file)
-            return UavParams(data_dict)
+        full_path = os.path.abspath(json_config)
+        try:
+            with open(file=full_path, mode='r') as file:
+                data_dict = json.load(file)
+                return UavParams(data_dict)
+        except Exception as ex:
+            print(f'{ex} {full_path}')
+            raise ex
 
     def __init__(self, uav_config: dict):
         self.uav_descriptor = uav_config['uav_descriptor']

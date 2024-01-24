@@ -1,7 +1,7 @@
 import http.client
 from http.client import HTTPResponse
 
-from common.meta_classes.no_instance_meta import NoInstanceMeta
+from python.common.meta_classes.no_instance_meta import NoInstanceMeta
 
 class Http2Client(metaclass=NoInstanceMeta):
     """sends data bytes over http2 POST request"""

@@ -1,4 +1,4 @@
-from uav_simulator.communication.messages.message_base import MessageBase
+from python.uav_simulator.communication.messages.message_base import MessageBase
 
 class MessageSentFailsArgs:
     def __init__(self, exception: Exception = None, message: MessageBase = None, text=''):

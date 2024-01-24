@@ -3,8 +3,8 @@ import sys
 import random
 import time
 
-from common.logging_provider.logging_initiator_base import LoggingInitiatorBase
-from common.logging_provider.reverse_rotating_file_handler import ReverseRotatingFileHandler
+from python.common.logging_provider.logging_initiator_base import LoggingInitiatorBase
+from python.common.logging_provider.reverse_rotating_file_handler import ReverseRotatingFileHandler
 
 class LoggingInitiatorByCode(LoggingInitiatorBase):
 

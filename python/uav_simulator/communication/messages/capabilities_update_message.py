@@ -1,9 +1,9 @@
 from typing import List
 import msgpack
 
-from uav_simulator.capabilities.capability_data import CapabilityData
-from uav_simulator.communication.messages.message_base import MessageBase
-from uav_simulator.communication.messages.message_type_enum import MessageTypeEnum
+from python.uav_simulator.capabilities.capability_data import CapabilityData
+from python.uav_simulator.communication.messages.message_base import MessageBase
+from python.uav_simulator.communication.messages.message_type_enum import MessageTypeEnum
 
 class CapabilitiesUpdateMessage(MessageBase):
     MESSAGE_TYPE = MessageTypeEnum.CAPABILITIES_UPDATE

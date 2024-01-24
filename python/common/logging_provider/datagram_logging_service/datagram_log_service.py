@@ -4,8 +4,8 @@ import pickle
 import socket
 import sys
 
-from common.logging_provider.logging_initiator_base import LoggingInitiatorBase
-from common.logging_provider.logging_initiator_with_config import LoggingInitiatorWithConfig
+from python.common.logging_provider.logging_initiator_base import LoggingInitiatorBase
+from python.common.logging_provider.logging_initiator_with_config import LoggingInitiatorWithConfig
 
 class DatagramLogReceiver:
     def __init__(self, datagram_endpoint: tuple[str, int]):

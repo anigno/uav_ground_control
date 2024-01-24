@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from logging import Logger
 from typing import Dict, Optional
 
-from uav_simulator.communication.messages.message_base import MessageBase
+from python.uav_simulator.communication.messages.message_base import MessageBase
 
 class MessagesFactoryBase(ABC):
     """base for messages factory, creates message instance from given message type and data bytes"""

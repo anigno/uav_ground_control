@@ -2,7 +2,7 @@ import asyncio
 import threading
 import time
 
-from common.decorators.time_measure_between_calls_decorator import time_measure_between_calls_decorator
+from python.common.decorators.time_measure_between_calls_decorator import time_measure_between_calls_decorator
 
 _periodic_run_loop = asyncio.get_event_loop()
 _periodic_tasks = []
