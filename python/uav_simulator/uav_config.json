@@ -1,0 +1,12 @@
+{
+  "uav_descriptor": "UAV01",
+  "max_flight_time": 120,
+  "flight_velocity": 10.0,
+  "status_update_interval": 5,
+  "capabilities_update_interval": 10,
+  "in_location_distance": 2.0,
+  "local_ip": "127.0.0.1",
+  "local_port": 2001,
+  "ground_control_ip": "127.0.0.1",
+  "ground_control_port": 1001
+}

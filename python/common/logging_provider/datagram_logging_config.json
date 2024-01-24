@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "formatters": {
+    "main_format": {
+      "class": "logging.Formatter",
+      "format": "$%(asctime)s|%(threadName)s|%(levelname)s|%(module)s,%(funcName)s|%(message)s"
+    }
+  },
+  "handlers": {
+    "null": {
+      "class": "logging.NullHandler"
+    },
+    "stream_handler": {
+      "class": "logging.StreamHandler",
+      "formatter": "main_format",
+      "stream": "ext://sys.stdout"
+    },
+    "datagram_handler": {
+      "class": "logging.handlers.DatagramHandler",
+      "host": "localhost",
+      "port": 9999,
+      "level": "DEBUG"
+    }
+  },
+  "loggers": {
+    "stream_only_logger": {
+      "level": "DEBUG",
+      "handlers": [
+        "stream_handler"
+      ]
+    },
+    "datagram_logger": {
+      "handlers": [
+        "datagram_handler",
+        "stream_handler"
+      ],
+      "level": "DEBUG"
+    }
+  }
+}

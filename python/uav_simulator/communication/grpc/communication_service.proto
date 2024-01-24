@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package communication_service;
+
+enum FlightState {
+  OFF = 0;
+  IDLE = 10;
+  TO_DESTINATION = 20;
+  TO_HOME = 30;
+  HOLD_POSITION = 40;
+}
+message pLocation3d{
+  double x_lon=10;
+  double y_lat=20;
+  double h_asl=30;
+}
+message pDirection3d{
+  double azimuth=10;
+  double elevation=20;
+}
+
+message pCapabilityData{
+  string descriptor=10;
+  bytes data=20;
+}
+
+message pUavStatus{
+  pLocation3d location=10;
+  pDirection3d direction=20;
+  double velocity=30;
+  uint32 remaining_flight_time=40;
+  FlightState flight_state=50;
+  repeated pCapabilityData capability_data=60;
+}
+
+message pFlyToDestination {
+  uint32 message_id=1;
+  uint32 mission_id=10;
+  bool is_destination_home=20;
+  pLocation3d location = 30;
+}
+
+message pStatusUpdate {
+  uint32 message_id=1;
+  string uav_descriptor = 10;
+  pUavStatus uav_status=20;
+}
+
+message pResponse{
+  string response_string=10;
+}
+service CommunicationService {
+  rpc StatusUpdateRequest (pStatusUpdate) returns (pResponse);
+  rpc FlyToDestinationRequest (pFlyToDestination) returns (pResponse);
+}
