@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ground_control", "ground_control\ground_control.csproj", "{FC95C7C9-379E-4310-9BF2-FC0D80AC6DA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "communication", "communication\communication.csproj", "{DE7A8400-9E7A-482B-B1FE-DEBF2194A791}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC95C7C9-379E-4310-9BF2-FC0D80AC6DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC95C7C9-379E-4310-9BF2-FC0D80AC6DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC95C7C9-379E-4310-9BF2-FC0D80AC6DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC95C7C9-379E-4310-9BF2-FC0D80AC6DA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE7A8400-9E7A-482B-B1FE-DEBF2194A791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7A8400-9E7A-482B-B1FE-DEBF2194A791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7A8400-9E7A-482B-B1FE-DEBF2194A791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7A8400-9E7A-482B-B1FE-DEBF2194A791}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BFD9B04-CD21-4CDA-A3FC-6748D6071384}
+	EndGlobalSection
+EndGlobal
