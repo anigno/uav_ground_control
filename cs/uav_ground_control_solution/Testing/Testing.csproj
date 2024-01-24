@@ -7,7 +7,7 @@
 
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    <StartupObject>Program</StartupObject>
+    <StartupObject>Testing.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
