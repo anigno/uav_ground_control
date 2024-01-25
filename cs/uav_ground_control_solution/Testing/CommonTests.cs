@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using communication.http2;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
@@ -12,64 +13,22 @@ namespace Testing
 {
     class Program
     {
-        public static void Main() { CreateHostBuilder().Build().Run(); }
-
-        public static IHostBuilder CreateHostBuilder() => Host.CreateDefaultBuilder()
-            .ConfigureWebHostDefaults(
-                webBuilder =>
-                {
-                    webBuilder.ConfigureKestrel(
-                        options =>
-                        {
-                            options.Listen(
-                                IPAddress.Parse("127.0.0.1"),
-                                1001,
-                                listenOptions =>
-                                {
-                                    listenOptions.Protocols = HttpProtocols.Http1AndHttp2;
-                                });
-                        });
-
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
-
-    public class Startup
-    {
-        public void ConfigureServices(IServiceCollection services)
+        public static void Main()
         {
-            // Add any required services here
+            Http2Server.Init("127.0.0.1", 1001);
+            Http2Server.OnDataReceived += Http2Server_OnDataReceived;
+            Http2Server.Start();
         }
 
-        public void Configure(IApplicationBuilder app)
+        private static void Http2Server_OnDataReceived(object? sender, byte[] data_bytes)
         {
-            app.Run(
-                async context =>
-                {
-                    var request = context.Request;
-                    byte[] requestBodyBytes = await ReadRequestBodyAsync(request.Body);
-                    // reverse bytes for little endian of BitConverter and get message type
-                    byte[] dataBytes = new byte[] { requestBodyBytes[1], requestBodyBytes[0] };
-                    ushort messageTypeValue = BitConverter.ToUInt16(dataBytes, 0);
-                    // get message bytes
-                    byte[] message_data_bytes = new byte[requestBodyBytes.Length - 2];
-                    Array.Copy(requestBodyBytes, 2, message_data_bytes, 0, requestBodyBytes.Length - 2);
-
-                    Console.WriteLine($"Received: message type:{messageTypeValue} {requestBodyBytes.Length}");
-
-                    // Respond with a message (replace with your response logic)
-                    await context.Response.WriteAsync("200");
-                });
+            // reverse bytes for little endian of BitConverter and get message type
+            byte[] dataBytes = [data_bytes[1], data_bytes[0]];
+            ushort messageTypeValue = BitConverter.ToUInt16(dataBytes, 0);
+            // get message bytes
+            byte[] messageDataBytes = new byte[data_bytes.Length - 2];
+            Array.Copy(data_bytes, 2, messageDataBytes, 0, data_bytes.Length - 2);
+            Console.WriteLine($"{messageTypeValue} {messageDataBytes.Length}");
         }
-
-        private async Task<byte[]> ReadRequestBodyAsync(Stream body)
-        {
-            using (var memoryStream = new MemoryStream())
-            {
-                await body.CopyToAsync(memoryStream);
-                return memoryStream.ToArray();
-            }
-        }
-
     }
 }
