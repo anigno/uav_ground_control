@@ -15,10 +15,31 @@ namespace Testing
     {
         public static void Main()
         {
-            Http2Server.Init("127.0.0.1", 1001);
-            Http2Server.OnDataReceived += Http2Server_OnDataReceived;
-            Http2Server.Start();
+            Task.Factory
+                .StartNew(
+                    () =>
+                    {
+                        Http2Server.Init("127.0.0.1", 1001);
+                        Http2Server.OnDataReceived += Http2Server_OnDataReceived;
+                        Http2Server.Start();
+                    });
+
+            Task.Factory
+                .StartNew(
+                    async () =>
+                    {
+                        while (true)
+                        {
+                            Http2Client.SendDataRequest(new byte[] { 1, 2, 3, 4 }, "127.0.0.1", 1001);
+                            await Task.Delay(TimeSpan.FromSeconds(1));
+
+                        }
+                    });
+            Console.WriteLine("enter to exit");
+            Console.ReadLine();
+
         }
+
 
         private static void Http2Server_OnDataReceived(object? sender, byte[] data_bytes)
         {
@@ -28,7 +49,7 @@ namespace Testing
             // get message bytes
             byte[] messageDataBytes = new byte[data_bytes.Length - 2];
             Array.Copy(data_bytes, 2, messageDataBytes, 0, data_bytes.Length - 2);
-            Console.WriteLine($"{messageTypeValue} {messageDataBytes.Length}");
+            Console.WriteLine($"received data {messageTypeValue} {messageDataBytes.Length}");
         }
     }
 }
