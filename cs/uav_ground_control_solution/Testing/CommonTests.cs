@@ -1,13 +1,4 @@
 ﻿using communication.http2;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Server.Kestrel.Core;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using System;
-using System.Net;
-using System.Text;
 
 namespace Testing
 {
@@ -30,12 +21,16 @@ namespace Testing
                     {
                         while (true)
                         {
-                            Http2Client.SendDataRequest(new byte[] { 1, 2, 3, 4 }, "127.0.0.1", 1001);
+                            // convert current milliseconds to bytes
+                            long ms = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
+                            byte[] bytes = BitConverter.GetBytes(ms);
+                            // send the bytes
+                            Http2Client.SendDataRequest(bytes, "127.0.0.1", 1001);
                             await Task.Delay(TimeSpan.FromSeconds(1));
 
                         }
                     });
-            Console.WriteLine("enter to exit");
+            Console.WriteLine("enter to exit"); 
             Console.ReadLine();
 
         }
