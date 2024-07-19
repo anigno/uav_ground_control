@@ -7,7 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MessagePack" Version="2.5.140" />
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
+    <PackageReference Include="MsgPack" Version="0.1.0.2011042300" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Calabilities\Capabilities.csproj" />
   </ItemGroup>
 
 </Project>

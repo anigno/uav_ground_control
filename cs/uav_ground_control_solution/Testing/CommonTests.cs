@@ -30,7 +30,7 @@ namespace Testing
 
                         }
                     });
-            Console.WriteLine("enter to exit"); 
+            Console.WriteLine("enter to exit");
             Console.ReadLine();
 
         }
